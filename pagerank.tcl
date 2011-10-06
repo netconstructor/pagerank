@@ -9,13 +9,14 @@
 # License: http://www.opensource.org/licenses/bsd-license.php The BSD 2-Clause License
 # Link: http://pagerank.phurix.net/
 # Tags: pagerank, lookup, google, api
-# Updated: 01-Aug-2011
+# Updated: 06-Sept-2011
 #
 ###Usage
 # > .pr hm2k.com
 # <Bot> HM2K, * PageRank: 7/10
 #
 ###Revisions
+# 0.3	- improved result checking; new 2011 url update
 # 0.2	- now calculates it's own "checkhash"
 # 0.1   - alpha release
 #
@@ -33,11 +34,11 @@
 # Namespace
 namespace eval ::pr {
 	variable version
-	set version "0.2"; #current version of this script
+	set version "0.3"; #current version of this script
 
 	variable pr
 	# Default settings
-	set pr(ver) "0.2"; #current version of this file
+	set pr(ver) "0.3"; #current version of this file
 	set pr(cmd) ".pr"; #public command trigger
 	set pr(dcccmd) "pr"; #dcc command trigger
 	set pr(prefix) "* PageRank:"; #output prefix

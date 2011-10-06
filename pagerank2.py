@@ -26,7 +26,7 @@ def GetPageRank (query):
     import httplib
     conn = httplib.HTTPConnection(prhost)
     hash = GetHash(query)
-    path=prpath % (hash,query)
+    path = prpath % (hash,query)
     conn.request("GET", path)
     response = conn.getresponse()
     data = response.read()
