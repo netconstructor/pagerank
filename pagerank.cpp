@@ -1,5 +1,7 @@
 /*
-    Google Pagerank Checksum Algorithm (Firefox Toolbar)
+    pagerank.cpp
+
+	Google Pagerank Checksum Algorithm (Using the Firefox Toolbar)
 		Downloaded from http://pagerank.phurix.net/
 
     Compile With:

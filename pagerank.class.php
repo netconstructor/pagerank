@@ -28,7 +28,7 @@ class PageRank {
 	 */
 	function PageRank ($q,$context=NULL) {
 		$ch=$this->checksum($this->makehash($q));
-		$url='http://%s/search?client=navclient-auto&ch=%s&features=Rank&q=info:%s';
+		$url='http://%s/tbr?client=navclient-auto&ch=%s&features=Rank&q=info:%s';
 		$url=sprintf($url,$this->host,$ch,$q);
 		return file_get_contents($url,false,$context);
 	}

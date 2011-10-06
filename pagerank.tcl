@@ -7,7 +7,7 @@
 # Name: Google PageRank Lookup
 # Author: HM2K <irc@hm2k.org>
 # License: http://www.opensource.org/licenses/bsd-license.php The BSD 2-Clause License
-# Link: http://pagerankviewer.com/
+# Link: http://pagerank.phurix.net/
 # Tags: pagerank, lookup, google, api
 # Updated: 01-Aug-2011
 #
@@ -43,7 +43,7 @@ namespace eval ::pr {
 	set pr(prefix) "* PageRank:"; #output prefix
 	set pr(usage) "Usage: $pr(cmd) <domain|url>";
 	set pr(ua) "Mozilla/4.0 (compatible; GoogleToolbar 2.0.111-big; Windows XP 5.1)"; #user agent simulation
-	set pr(urlpr) "http://www.google.com/search"; #url
+	set pr(urlpr) "http://toolbarqueries.google.com/tbr"; #url
 	set pr(regex_rank) {Rank_[0-9]+:[0-9]+:([0-9]+)}; #ranking expression
 	set pr(output) "%s/10"; #format the output
 	set pr(failed) "N/A"; #output for failed

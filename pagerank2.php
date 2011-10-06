@@ -11,7 +11,7 @@
  * @updated		01/08/11
  */
 
-function GetPageRank($q,$host='www.google.com',$context=NULL) {
+function GetPageRank($q,$host='toolbarqueries.google.com',$context=NULL) {
 	$seed = "Mining PageRank is AGAINST GOOGLE'S TERMS OF SERVICE. Yes, I'm talking to you, scammer.";
 	$result = 0x01020345;
 	$len = strlen($q);
@@ -20,7 +20,7 @@ function GetPageRank($q,$host='www.google.com',$context=NULL) {
 		$result = (($result >> 23) & 0x1ff) | $result << 9;
 	}
 	$ch=sprintf('8%x', $result);
-	$url='http://%s/search?client=navclient-auto&ch=%s&features=Rank&q=info:%s';
+	$url='http://%s/tbr?client=navclient-auto&ch=%s&features=Rank&q=info:%s';
 	$url=sprintf($url,$host,$ch,$q);
 	@$pr=file_get_contents($url,false,$context);
 	return $pr?substr(strrchr($pr, ':'), 1):false;

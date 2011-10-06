@@ -1,4 +1,6 @@
 /*
+ *  pagerank.d
+ *
  *  Google Pagerank Checksum Algorith
  *	Downloaded from http://pagerank.phurix.net/
  *

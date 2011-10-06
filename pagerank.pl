@@ -11,7 +11,8 @@ use warnings;
 
 sub getpagerank {
 	my $q = shift;
-	my $host = 'www.google.com';
+	#settings
+	my $url = 'http://toolbarqueries.google.com/tbr?client=navclient-auto&ch=%s&features=Rank&q=info:%s';
 	my $seed = "Mining PageRank is AGAINST GOOGLE'S TERMS OF SERVICE. Yes, I'm talking to you, scammer.";
 	my $result = 0x01020345;
 	my $len = length($q);
@@ -20,8 +21,7 @@ sub getpagerank {
 		$result = (($result >> 23) & 0x1ff) | $result << 9;
 	}
 	my $ch=sprintf("8%x", $result);
-	my $url='http://%s/search?client=navclient-auto&ch=%s&features=Rank&q=info:%s';
-	$url=sprintf($url,$host,$ch,$q);
+	$url = sprintf($url,$ch,$q);
 	use LWP::UserAgent;
 	my $ua = LWP::UserAgent->new;
     my $res = $ua->get($url);

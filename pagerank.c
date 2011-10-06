@@ -1,12 +1,13 @@
-/******************************************************************************
+/*
 Filename     : pagerank.c
 Description  : Google PageRank Checksum Algorithm 
+                Downloaded from http://pagerank.phurix.net/
 
 Log          : Ver 0.1 2005-9-13  first release
                Ver 1.0 2005-10-19  fixed :final character bug
                Ver 1.1 2006-10-05  refine code
                Ver 1.2 2008-8-20   use boolean type
-******************************************************************************/
+*/
 
 #include <stdio.h>
 #include <stdbool.h>

@@ -5,7 +5,7 @@
 
 # Settings
 prhost='toolbarqueries.google.com'
-prurl='http://%s/search?client=navclient-auto&ch=%s&features=Rank&q=info:%s'
+prurl='http://%s/tbr?client=navclient-auto&ch=%s&features=Rank&q=info:%s'
 
 # Definitions
 def  IntStr(String, Integer, Factor):

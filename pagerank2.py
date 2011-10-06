@@ -9,8 +9,8 @@
 # pagerank2.py 0.1 - Public release
 
 # Settings
-prhost='www.google.com'
-prpath='/search?client=navclient-auto&ch=%s&features=Rank&q=info:%s'
+prhost='toolbarqueries.google.com'
+prpath='/tbr?client=navclient-auto&ch=%s&features=Rank&q=info:%s'
 
 # Function definitions
 def GetHash (query):
