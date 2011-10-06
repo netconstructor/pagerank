@@ -42,9 +42,10 @@ namespace eval ::pr {
 	set pr(dcccmd) "pr"; #dcc command trigger
 	set pr(prefix) "* PageRank:"; #output prefix
 	set pr(usage) "Usage: $pr(cmd) <domain|url>";
-	set pr(ua) "Mozilla/4.0 (compatible; GoogleToolbar 2.0.111-big; Windows XP 5.1)"; #user agent simulation
+	set pr(ua) "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.122 Safari/534.30"; #user agent simulation
 	set pr(urlpr) "http://toolbarqueries.google.com/tbr"; #url
 	set pr(regex_rank) {Rank_[0-9]+:[0-9]+:([0-9]+)}; #ranking expression
+	set pr(regex_moved) {<A HREF="(.+?)">here</A>}; #moved expression
 	set pr(output) "%s/10"; #format the output
 	set pr(failed) "N/A"; #output for failed
 	# Note: Copy the above "Default settings" section into "pagerank.settings.tcl"
@@ -147,10 +148,7 @@ proc ::pr::getpr { arg } {
   set http [::http::geturl $pr(urlpr)?$query]
   set data [::http::data $http]
   set data [::htmlparse::mapEscapes $data]
-  if {[regexp $pr(regex_rank) $data matched result]} {
-    return $result
-  }
-  return
+  return $data
 }
 
 # Return PageRank
@@ -158,8 +156,12 @@ proc ::pr::get { arg } {
   variable pr
   set data [::pr::getpr $arg]
   if {$data eq {}} { return $pr(failed) }
-  return [format $pr(output) $data]
-  
+  if {[regexp $pr(regex_rank) $data matched result]} {
+	return [format $pr(output) $result]
+  }
+  if {[regexp $pr(regex_moved) $data matched result]} {
+	return $result
+  }
 }
 
 ::pr::init
