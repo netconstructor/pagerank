@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# pagerank.pl by HM2K (c) 2011 (Updated: 02/08/11)
+# pagerank.pl by HM2K (c) 2011 (Updated: 06/10/11)
 #		Downloaded from http://pagerank.phurix.net/
 
 # Description: Calculates the Checkhash and returns the Google PageRank

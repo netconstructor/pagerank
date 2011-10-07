@@ -8,7 +8,7 @@
  * @author      James Wade <hm2k@php.net>
  * @version     $Revision: 2.1 $
  * @require     PHP 4.3.0 (file_get_contents)
- * @updated		06/09/11
+ * @updated		06/10/11
  */
 
 class PageRank {
