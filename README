@@ -1,20 +1,24 @@
 Google PageRank scripts
 
-	http://pagerank.phurix.net/
+Generates the CheckHash (ch) and lookups up the URL to parse the PageRank from Google.
+
+Copyright (c) 2011, James Wade. All rights reserved.
+
+LICENSE: http://www.opensource.org/licenses/bsd-license.php The BSD License
 
 Get PageRank in your language:
 
-pagerank.class.php GetPageRank() (PHP)
-pagerank2.py (Python)
-pagerank.pl (Perl)
-pagerank.tcl (for Eggdrop)
-pagerank.cpp (C++)
-pagerank.d (D)
+* pagerank2.class.php (PHP Class)
+* pagerank2.cli.php (PHP CLI)
+* pagerank2.php (PHP function)
+* pagerank2.py (Python)
+* pagerank.pl (Perl)
+* pagerank.tcl (for Eggdrop)
+* pagerank.cpp (C++)
+* pagerank.d (D)
+* pagerank.html - Google PageRank (Bookmarklet)
+* pagerank.class.php (Legacy PHP Class)
+* pagerank.py (Legacy Python)
+* pagerank.c (Legacy C)
 
-Legacy
-
-PageRank Class (PHP)
-pagerank.py (Python)
-pagerank.c (C)
-
-pagerank.html - Google PageRank (Bookmarklet)
+* Also see: http://pagerank.phurix.net/
