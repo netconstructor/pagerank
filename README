@@ -27,6 +27,8 @@ UPDATE 06/10/2011:
 
 Google has changed their code for Google PageRank lookups.
 
+We've already updated all the code here with the new fix which is:
+
 REPLACE:
 	toolbarqueries.google.com/search
 
