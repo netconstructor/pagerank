@@ -22,3 +22,15 @@ Get PageRank in your language:
 * pagerank.c (Legacy C)
 
 * Also see: http://pagerank.phurix.net/
+
+UPDATE 06/10/2011:
+
+Google has changed their code for Google PageRank lookups.
+
+REPLACE:
+	toolbarqueries.google.com/search
+
+WITH:
+	toolbarqueries.google.com/tbr
+
+* Read more: http://labs.phurix.net/posts/is-google-pagerank-dead
